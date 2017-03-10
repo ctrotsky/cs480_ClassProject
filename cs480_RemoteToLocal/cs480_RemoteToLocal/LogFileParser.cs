@@ -9,7 +9,7 @@ namespace RemoteToLocalAttackDetection
 {
     class LogFileParser {
 
-        public LogFile Parse(String filename)
+        public void Parse(String filename, List<LogFileEntry> log)
         {
             var fileStream = new FileStream(filename, FileMode.Open, FileAccess.Read);         
 
@@ -18,7 +18,6 @@ namespace RemoteToLocalAttackDetection
             {
                 string line;
                 LogFileEntry entry;
-                LogFile log = new LogFile();
                 int lineNum = 1;
 
                 Console.WriteLine("Parsing log file..");
@@ -28,7 +27,7 @@ namespace RemoteToLocalAttackDetection
                     try
                     {
                         entry = new LogFileEntry(line);
-                        log.add(entry);
+                        log.Add(entry);
                     }
                     catch (KeyNotFoundException e)
                     {
@@ -45,7 +44,7 @@ namespace RemoteToLocalAttackDetection
                 }
 
                 Console.WriteLine("Finished parsing.");
-                return log;
+                return;
             }
         }
     }

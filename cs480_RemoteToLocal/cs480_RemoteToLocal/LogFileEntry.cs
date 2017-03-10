@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RemoteToLocalAttackDetection
 {
+    [Serializable]
     class LogFileEntry
     {
         private static Dictionary<string, int> Months = new Dictionary<string, int> {
@@ -48,6 +49,11 @@ namespace RemoteToLocalAttackDetection
 
 
         //https://ubuntuforums.org/showthread.php?t=1580771
+
+        public LogFileEntry()
+        {
+
+        }
 
         public LogFileEntry(string line)
         {

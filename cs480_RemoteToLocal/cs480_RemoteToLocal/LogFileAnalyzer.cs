@@ -8,7 +8,7 @@ namespace RemoteToLocalAttackDetection
 {
     class LogFileAnalyzer
     {
-        public void Analyze(LogFile log, int maxFailures, TimeSpan timeWindow)
+        public void Analyze(List<LogFileEntry> log, int maxFailures, TimeSpan timeWindow)
         {
             //timeWindow given in seconds.
             //Each time an authentication failure is encountered, the entry is added to the considered entries for that IP address.

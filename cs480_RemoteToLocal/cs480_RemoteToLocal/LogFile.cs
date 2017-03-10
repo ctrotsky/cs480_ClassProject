@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RemoteToLocalAttackDetection
 {
+    [Serializable]
     class LogFile
     {
         DateTime date;
