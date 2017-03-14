@@ -8,88 +8,26 @@
         Title="MainWindow" Height="900" Width="1500">
     <Grid Margin="0,0,0,0.5">
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="461" Margin="233,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="878"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="37" Margin="974,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="137"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="37" Margin="840,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="135"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="37" Margin="610,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="231"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="37" Margin="369,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="242"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="37" Margin="233,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="137"/>
+        <Grid>
+            <ListView Margin="233,40,385,408" x:Name="lvUsers">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Suspicious" Width="120" DisplayMemberBinding="{Binding Suspicious}" />
+                        <GridViewColumn Header="Date and Time" Width="200" DisplayMemberBinding="{Binding DateAndTime}" />
+                        <GridViewColumn Header="Source" Width="260" DisplayMemberBinding="{Binding Source}" />
+                        <GridViewColumn Header="Event ID" Width="150" DisplayMemberBinding="{Binding EventID}" />
+                        <GridViewColumn Header="Task Catagory" Width="150" DisplayMemberBinding="{Binding TaskCatagory}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="245,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="439"><Run Text="System            Num"/><Run Text="ber of Events:"/></TextBlock>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="242,42,0,0" TextWrapping="Wrap" Text="Level" VerticalAlignment="Top" Height="27" Width="128" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.235"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="378,41,0,0" TextWrapping="Wrap" Text="Date and Time" VerticalAlignment="Top" Height="22" Width="133" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.235"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="619,41,0,0" TextWrapping="Wrap" Text="Source" VerticalAlignment="Top" Height="19" Width="135" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.091"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="849,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="135" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.091"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="Event ID"/></TextBlock>
-        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="991,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="135" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.091"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="Task Catagory"/></TextBlock>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="404" Margin="233,68,0,0" VerticalAlignment="Top" Width="878">
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-        </ListBox>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="400" Margin="233,472,0,0" Stroke="Black" VerticalAlignment="Top" Width="878"/>
         <Button x:Name="button" Content="General" HorizontalAlignment="Left" Margin="233,526,0,0" VerticalAlignment="Top" Width="205" Height="32"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="233,504,0,0" TextWrapping="Wrap" Text="(Event ID), (Source)" VerticalAlignment="Top" Width="878" TextChanged="textBox_TextChanged"/>
         <Button x:Name="button_Copy" Content="Details" HorizontalAlignment="Left" Margin="437,526,0,0" VerticalAlignment="Top" Width="205" Height="32"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="90" Margin="233,558,0,0" TextWrapping="Wrap" Text="This space is gonna be a scrolling textbox with misc info." VerticalAlignment="Top" Width="878"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="22" Margin="233,669,0,0" TextWrapping="Wrap" Text="Log Name:" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="22" Margin="233,669,0,0" TextWrapping="Wrap" Text="Log Name:" VerticalAlignment="Top" Width="120" TextChanged="textBox2_TextChanged"/>
         <TextBox x:Name="textBox2_Copy" HorizontalAlignment="Left" Height="22" Margin="352,669,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox2_Copy1" HorizontalAlignment="Left" Height="22" Margin="233,690,0,0" TextWrapping="Wrap" Text="Source:" VerticalAlignment="Top" Width="120" TextChanged="textBox2_Copy1_TextChanged"/>
         <TextBox x:Name="textBox2_Copy2" HorizontalAlignment="Left" Height="22" Margin="233,711,0,0" TextWrapping="Wrap" Text="Event ID:" VerticalAlignment="Top" Width="120"/>

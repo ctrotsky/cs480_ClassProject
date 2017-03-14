@@ -23,6 +23,8 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+            List<LogFileEntry> items = new List<LogFileEntry>();
+            //items.Add(new User() { Name = "", Age = 42, Mail = "john@doe-family.com" });
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -39,5 +41,19 @@ namespace WpfApplication1
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
+
+
+
 }
+
