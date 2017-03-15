@@ -12,7 +12,8 @@
             <ListView Margin="233,40,385,408" x:Name="lvUsers">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Suspicious" Width="60" DisplayMemberBinding="{Binding Suspicious}" />
+                        <GridViewColumn Header="Event #" Width="60" DisplayMemberBinding="{Binding EventNumber}" />
+                        <GridViewColumn Header="Suspicious" Width="65" DisplayMemberBinding="{Binding Suspicious}" />
                         <GridViewColumn Header="Date and Time" Width="110" DisplayMemberBinding="{Binding DateAndTime}" />
                         <GridViewColumn Header="SourceIP" Width="100" DisplayMemberBinding="{Binding SourceIP}" />
                         <GridViewColumn Header="Message" Width="500" DisplayMemberBinding="{Binding Message}" />

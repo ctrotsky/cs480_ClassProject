@@ -70,7 +70,7 @@ namespace WpfApplication1
                     sus = "X";
                 }
 
-                var row = new { Suspicious = sus, DateAndTime = entry.dateTime, SourceIP = entry.sourceIP, Message = entry.message };
+                var row = new {EventNumber = i, Suspicious = sus, DateAndTime = entry.dateTime, SourceIP = entry.sourceIP, Message = entry.message };
 
                 this.Dispatcher.Invoke(() =>
                 {
