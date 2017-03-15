@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RemoteToLocalAttackDetection
+namespace WpfApplication1
 {
     class LogFileAnalyzer
     {

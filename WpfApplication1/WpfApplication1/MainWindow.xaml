@@ -8,24 +8,26 @@
         Title="MainWindow" Height="900" Width="1500">
     <Grid Margin="0,0,0,0.5">
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="461" Margin="233,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="878"/>
-        <Grid>
+        <Grid Margin="0,0,0,-0.5">
             <ListView Margin="233,40,385,408" x:Name="lvUsers">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Suspicious" Width="120" DisplayMemberBinding="{Binding Suspicious}" />
-                        <GridViewColumn Header="Date and Time" Width="200" DisplayMemberBinding="{Binding DateAndTime}" />
-                        <GridViewColumn Header="Source" Width="260" DisplayMemberBinding="{Binding Source}" />
-                        <GridViewColumn Header="Event ID" Width="150" DisplayMemberBinding="{Binding EventID}" />
-                        <GridViewColumn Header="Task Catagory" Width="150" DisplayMemberBinding="{Binding TaskCatagory}" />
+                        <GridViewColumn Header="Suspicious" Width="60" DisplayMemberBinding="{Binding Suspicious}" />
+                        <GridViewColumn Header="Date and Time" Width="110" DisplayMemberBinding="{Binding DateAndTime}" />
+                        <GridViewColumn Header="SourceIP" Width="100" DisplayMemberBinding="{Binding SourceIP}" />
+                        <GridViewColumn Header="Message" Width="500" DisplayMemberBinding="{Binding Message}" />
                     </GridView>
                 </ListView.View>
             </ListView>
+            <TextBox x:Name="MaxFailuresTextBox" HorizontalAlignment="Left" Height="22" Margin="90,36,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="MinutesTextBox" HorizontalAlignment="Left" Height="22" Margin="90,94,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label" Content="Max Failures:" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label_Copy" Content="Minutes:" HorizontalAlignment="Left" Margin="90,68,0,0" VerticalAlignment="Top"/>
         </Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="245,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="439"><Run Text="System            Num"/><Run Text="ber of Events:"/></TextBlock>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="400" Margin="233,472,0,0" Stroke="Black" VerticalAlignment="Top" Width="878"/>
-        <Button x:Name="button" Content="General" HorizontalAlignment="Left" Margin="233,526,0,0" VerticalAlignment="Top" Width="205" Height="32"/>
+        <Button x:Name="button" Content="Open Log" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="77" Height="32"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="233,504,0,0" TextWrapping="Wrap" Text="(Event ID), (Source)" VerticalAlignment="Top" Width="878" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="button_Copy" Content="Details" HorizontalAlignment="Left" Margin="437,526,0,0" VerticalAlignment="Top" Width="205" Height="32"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="90" Margin="233,558,0,0" TextWrapping="Wrap" Text="This space is gonna be a scrolling textbox with misc info." VerticalAlignment="Top" Width="878"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="22" Margin="233,669,0,0" TextWrapping="Wrap" Text="Log Name:" VerticalAlignment="Top" Width="120" TextChanged="textBox2_TextChanged"/>
         <TextBox x:Name="textBox2_Copy" HorizontalAlignment="Left" Height="22" Margin="352,669,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

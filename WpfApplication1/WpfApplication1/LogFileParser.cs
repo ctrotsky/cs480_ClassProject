@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RemoteToLocalAttackDetection
+namespace WpfApplication1
 {
     class LogFileParser {
 
@@ -23,6 +23,7 @@ namespace RemoteToLocalAttackDetection
                 Console.WriteLine("Parsing log file..");
 
                 while ((line = streamReader.ReadLine()) != null)
+                //for (int i = 0; i < 100; i++)
                 {
                     try
                     {

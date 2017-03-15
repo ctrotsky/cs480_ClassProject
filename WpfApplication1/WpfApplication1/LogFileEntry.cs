@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RemoteToLocalAttackDetection
+namespace WpfApplication1
 {
     [Serializable]
-    class LogFileEntry
+    public class LogFileEntry
     {
         private static Dictionary<string, int> Months = new Dictionary<string, int> {
             {"Jan", 1 },
